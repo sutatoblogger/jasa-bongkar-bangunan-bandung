@@ -8,12 +8,15 @@
 <meta name="keywords" content="Jasa Bongkar Bangunan Bandung, jasa borongan bongkar rumah Bandung Kulon, Kontraktor spesialis bongkar ruko Bandung Kota, Terima beli material bekas bongkaran Andir, Jasa bongkar interior kantor Sumur Bandung, Pemborong bongkar bangunan pabrik Bandung Timur, Tukang bongkar dinding kamar Cimahi, Rekomendasi kontraktor bongkar bangunan Bandung Raya">
 <link rel="canonical" href="https://jasa-bongkar-bangunan-bandung.vercel.app/">
 
+<!-- Preconnect & Preload untuk menghabisi delay LCP di Mobile -->
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80">
 
+<!-- Premium Typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Archivo:wght@600;700;800&display=swap" rel="stylesheet">
+<!-- Iconify -->
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
 
 <style>
@@ -26,7 +29,7 @@
   --zinc-100: #f4f4f5;
   --zinc-300: #d4d4d8;
   --zinc-400: #a1a1aa;
-  --zinc-500: #71717a;
+  --zinc-500: #82828b; /* Diperbarui untuk lulus kontras Accessibility */
   --zinc-800: #27272a;
   --zinc-900: #18181b;
   --zinc-950: #09090b;
@@ -51,7 +54,7 @@ h1, h2, h3, h4, .font-archivo {
 
 a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 img { max-width: 100%; height: auto; display: block; object-fit: cover; }
-iconify-icon { display: inline-block; } /* Fix CLS dari Iconify */
+iconify-icon { display: inline-block; }
 
 .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 .text-amber { color: var(--amber-500); }
@@ -81,7 +84,7 @@ header {
   z-index: 100;
   padding: 16px 0;
   transition: all 0.3s;
-  min-height: 69px; /* Fix CLS Header */
+  min-height: 69px;
 }
 .header-wrapper { display: flex; justify-content: space-between; align-items: center; }
 .logo-group { display: flex; align-items: center; gap: 12px; }
@@ -99,7 +102,7 @@ header {
   background-size: 200% 100%; animation: shimmer 3.5s linear infinite;
 }
 .logo-text { font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 15px; color: var(--zinc-100); line-height: 1.2; }
-.logo-sub { display: block; font-family: 'Inter', sans-serif; font-size: 11px; color: var(--zinc-500); font-weight: 400; }
+.logo-sub { display: block; font-family: 'Inter', sans-serif; font-size: 11px; color: var(--zinc-400); font-weight: 400; }
 .header-contact { display: flex; align-items: center; gap: 24px; }
 .phone-link { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--zinc-300); }
 .phone-link:hover { color: var(--amber-400); }
@@ -150,7 +153,7 @@ header {
 .pulse-dot::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: var(--amber-500); animation: pulseRing 1.6s ease-out infinite; }
 .pulse-dot::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: var(--amber-500); }
 
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); line-height: 1.05; margin-bottom: 24px; min-height: 150px; } /* Min-height cegah CLS teks */
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); line-height: 1.05; margin-bottom: 24px; min-height: 150px; }
 .hero-shimmer-text {
   background: linear-gradient(90deg, #f59e0b, #fcd34d, #f59e0b);
   background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -202,7 +205,7 @@ header {
 .usp-item iconify-icon { color: var(--amber-500); font-size: 28px; width: 28px; height: 28px; margin-top: 2px; transition: transform 0.3s; }
 .usp-item:hover iconify-icon { transform: scale(1.2); }
 .usp-content h3 { font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 4px; }
-.usp-content p { font-size: 14px; color: var(--zinc-500); }
+.usp-content p { font-size: 14px; color: var(--zinc-400); }
 
 .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .split-img-wrapper { position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/5; background: var(--zinc-900); }
@@ -215,7 +218,7 @@ header {
   animation: float 7s ease-in-out infinite; z-index: 2;
 }
 .stat-float p.big { font-family: 'Archivo', sans-serif; font-size: 32px; font-weight: 700; color: var(--amber-500); line-height: 1; }
-.stat-float p.small { font-size: 12px; color: var(--zinc-500); margin-top: 4px; }
+.stat-float p.small { font-size: 12px; color: var(--zinc-400); margin-top: 4px; }
 
 /* SERVICES GALLERY (SILO) */
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
@@ -260,7 +263,7 @@ header {
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary:hover { color: var(--amber-400); }
-.faq-item iconify-icon { color: var(--zinc-500); width: 18px; height: 18px; transition: transform 0.3s; }
+.faq-item iconify-icon { color: var(--zinc-400); width: 18px; height: 18px; transition: transform 0.3s; }
 .faq-item[open] iconify-icon { transform: rotate(180deg); }
 .faq-item p { padding: 0 24px 24px; font-size: 14px; color: var(--zinc-400); }
 
@@ -327,6 +330,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
 }
 </style>
 
+<!-- JSON-LD GOD-TIER 3-NODE SILO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -411,27 +415,28 @@ textarea.form-input { resize: vertical; min-height: 100px; }
 
 <header>
   <div class="container header-wrapper">
-    <a href="#" class="logo-group">
-      <span class="logo-icon">MA</span>
+    <a href="#" class="logo-group" aria-label="Beranda MAULANA ABADI">
+      <span class="logo-icon" aria-hidden="true">MA</span>
       <span class="leading-none">
         <span class="logo-text">MAULANA ABADI</span>
         <span class="logo-sub">Spesialis Bongkar Bangunan</span>
       </span>
     </a>
     <div class="header-contact">
-      <a href="https://wa.me/6281339458434?text=*Halo%20Admin%20MAULANA%20ABADI,%20saya%20tertarik%20dengan%20jasa%20bongkar%20bangunan.%20Bisa%20info%20lebih%20lanjut?*" class="phone-link" target="_blank" rel="noopener">
-        <iconify-icon icon="solar:phone-calling-linear" width="18"></iconify-icon>
+      <a href="https://wa.me/6281339458434?text=*Halo%20Admin%20MAULANA%20ABADI,%20saya%20tertarik%20dengan%20jasa%20bongkar%20bangunan.%20Bisa%20info%20lebih%20lanjut?*" class="phone-link" target="_blank" rel="noopener" aria-label="Telepon Admin">
+        <iconify-icon icon="solar:phone-calling-linear" width="18" aria-hidden="true"></iconify-icon>
         0813-3945-8434
       </a>
       <a href="https://wa.me/6281339458434?text=*Halo%20Admin%20MAULANA%20ABADI,%20saya%20butuh%20survei%20gratis%20untuk%20rencana%20pembongkaran%20lahan%20saya.*" class="btn-primary" style="padding: 10px 20px;" target="_blank" rel="noopener">
         Survei Gratis
-        <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+        <iconify-icon icon="solar:arrow-right-linear" width="16" aria-hidden="true"></iconify-icon>
       </a>
     </div>
   </div>
 </header>
 
 <main>
+  <!-- HERO (AIDA: Attention & Interest) -->
   <section class="hero">
     <div class="hero-bg">
       <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80" alt="Alat Berat Bongkar Gedung Komersial" fetchpriority="high" loading="eager" decoding="sync">
@@ -454,30 +459,32 @@ textarea.form-input { resize: vertical; min-height: 100px; }
       <div class="hero-buttons">
         <a href="https://wa.me/6281339458434?text=*Halo%20Admin%20MAULANA%20ABADI,%20tolong%20jadwalkan%20survei%20gratis%20untuk%20pembongkaran%20bangunan%20saya%20di%20Bandung.*" class="btn-primary" target="_blank" rel="noopener">
           Konsultasi & Survei Gratis Sekarang
-          <iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon>
+          <iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon>
         </a>
         <a href="#layanan" class="btn-outline">Lihat Layanan Kami</a>
       </div>
 
       <div class="features-bar">
         <div class="feature-item">
-          <iconify-icon icon="solar:shield-check-linear"></iconify-icon>
+          <iconify-icon icon="solar:shield-check-linear" aria-hidden="true"></iconify-icon>
           Aman & Tidak Merusak Tetangga
         </div>
         <div class="feature-item">
-          <iconify-icon icon="solar:wallet-money-linear" style="animation-delay: 0.4s;"></iconify-icon>
+          <iconify-icon icon="solar:wallet-money-linear" style="animation-delay: 0.4s;" aria-hidden="true"></iconify-icon>
           Terima Beli Material (Cash)
         </div>
         <div class="feature-item">
-          <iconify-icon icon="solar:users-group-two-rounded-linear" style="animation-delay: 0.8s;"></iconify-icon>
+          <iconify-icon icon="solar:users-group-two-rounded-linear" style="animation-delay: 0.8s;" aria-hidden="true"></iconify-icon>
           Dikerjakan Tim Tukang Ahli
         </div>
       </div>
     </div>
   </section>
 
+  <!-- LCP LAZY RENDER WRAPPER -->
   <div class="lazy-render">
 
+    <!-- AGITASI (AIDA: Desire/Pain Point) -->
     <section class="section section-bg-dark">
       <div class="container">
         <div style="max-width: 600px; margin: 0 auto 40px; text-align: center;">
@@ -487,17 +494,17 @@ textarea.form-input { resize: vertical; min-height: 100px; }
         
         <div class="grid-3">
           <div class="glass-card">
-            <div class="glass-card-icon"><iconify-icon icon="solar:home-broken-linear"></iconify-icon></div>
+            <div class="glass-card-icon"><iconify-icon icon="solar:buildings-3-linear" aria-hidden="true"></iconify-icon></div>
             <h3>Struktur Tetangga Retak</h3>
             <p>Proses asal-asalan berisiko fatal. Struktur rumah tetangga ikut retak dan Anda bisa dituntut ganti rugi miliaran rupiah.</p>
           </div>
           <div class="glass-card" style="transition-delay: 80ms;">
-            <div class="glass-card-icon"><iconify-icon icon="solar:wind-linear"></iconify-icon></div>
+            <div class="glass-card-icon"><iconify-icon icon="solar:wind-linear" aria-hidden="true"></iconify-icon></div>
             <h3>Diprotes Warga Sekitar</h3>
             <p>Debu berterbangan tak terkendali dan suara bising yang tak kenal waktu seringkali memicu komplain keras dari warga sekitar komplek.</p>
           </div>
           <div class="glass-card" style="transition-delay: 160ms;">
-            <div class="glass-card-icon"><iconify-icon icon="solar:trash-bin-trash-linear"></iconify-icon></div>
+            <div class="glass-card-icon"><iconify-icon icon="solar:trash-bin-trash-linear" aria-hidden="true"></iconify-icon></div>
             <h3>Puing Ditinggal Kabur</h3>
             <p>Pemborong abal-abal kabur di tengah jalan, meninggalkan tumpukan puing menggunung yang merusak timeline konstruksi Anda.</p>
           </div>
@@ -505,6 +512,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
       </div>
     </section>
 
+    <!-- SOLUSI & USP -->
     <section class="section">
       <div class="container split-grid">
         <div class="split-img-wrapper">
@@ -522,28 +530,28 @@ textarea.form-input { resize: vertical; min-height: 100px; }
           
           <ul class="usp-list">
             <li class="usp-item">
-              <iconify-icon icon="solar:ruler-cross-pen-linear"></iconify-icon>
+              <iconify-icon icon="solar:ruler-cross-pen-linear" aria-hidden="true"></iconify-icon>
               <div class="usp-content">
                 <h3>Survei Lokasi & Estimasi 100% GRATIS</h3>
                 <p>Kami datang, kami hitung volume pekerjaan secara transparan, Anda tinggal terima beres.</p>
               </div>
             </li>
             <li class="usp-item" style="transition-delay: 80ms;">
-              <iconify-icon icon="solar:hand-shake-linear"></iconify-icon>
+              <iconify-icon icon="solar:hand-shake-linear" aria-hidden="true"></iconify-icon>
               <div class="usp-content">
                 <h3>Terima Beli Material Bekas (CASH)</h3>
                 <p>Kayu, besi beton, dan kusen tua Anda kami hargai tinggi untuk memotong biaya bongkar!</p>
               </div>
             </li>
             <li class="usp-item" style="transition-delay: 160ms;">
-              <iconify-icon icon="solar:shield-warning-linear"></iconify-icon>
+              <iconify-icon icon="solar:shield-warning-linear" aria-hidden="true"></iconify-icon>
               <div class="usp-content">
                 <h3>Eksekusi Presisi & Aman</h3>
                 <p>Teknik demolisi surgical. Bangunan berdempetan dijamin aman dari retakan.</p>
               </div>
             </li>
             <li class="usp-item" style="transition-delay: 240ms;">
-              <iconify-icon icon="solar:leaf-linear"></iconify-icon>
+              <iconify-icon icon="solar:leaf-linear" aria-hidden="true"></iconify-icon>
               <div class="usp-content">
                 <h3>Lahan Bersih Total</h3>
                 <p>Armada truk kami angkut semua puing sampah sampai lahan rata dan siap bangun hari itu juga.</p>
@@ -554,13 +562,14 @@ textarea.form-input { resize: vertical; min-height: 100px; }
           <div class="mt-8">
             <a href="https://wa.me/6281339458434?text=*Halo%20Admin%20MAULANA%20ABADI,%20saya%20punya%20material%20bekas%20bongkaran%20(kayu/besi/kusen).%20Apakah%20bisa%20di-survey%20untuk%20dibeli?*" class="btn-primary" target="_blank" rel="noopener">
               Jual Material Bekas Bongkaran Saya!
-              <iconify-icon icon="logos:whatsapp-icon" width="20"></iconify-icon>
+              <iconify-icon icon="logos:whatsapp-icon" width="20" aria-hidden="true"></iconify-icon>
             </a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SILO LAYANAN -->
     <section id="layanan" class="section section-bg-dark">
       <div class="container">
         <span class="section-subtitle">Spesialisasi Kami</span>
@@ -573,7 +582,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
               <span class="gallery-tag">Residensial</span>
               <h3 class="gallery-title">Bongkar Rumah Tua & Buang Puing</h3>
             </div>
-            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon></div>
+            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon></div>
           </a>
           
           <a href="https://dongkrakusaha.com/layanan-jasa-bongkar-bangunan-bandung-bandung-kota" class="gallery-item">
@@ -582,7 +591,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
               <span class="gallery-tag">Komersial</span>
               <h3 class="gallery-title">Demolisi Ruko & Gedung Bertingkat</h3>
             </div>
-            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon></div>
+            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon></div>
           </a>
           
           <a href="https://dongkrakusaha.com/layanan-jasa-bongkar-bangunan-bandung-sumur-bandung" class="gallery-item">
@@ -591,7 +600,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
               <span class="gallery-tag">Interior</span>
               <h3 class="gallery-title">Bongkar Interior, Atap & Partisi</h3>
             </div>
-            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon></div>
+            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon></div>
           </a>
           
           <a href="https://dongkrakusaha.com/layanan-jasa-bongkar-bangunan-bandung-bandung-timur" class="gallery-item">
@@ -600,7 +609,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
               <span class="gallery-tag">Skala Besar</span>
               <h3 class="gallery-title">Pemborong Bongkar Pabrik & Gudang</h3>
             </div>
-            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon></div>
+            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon></div>
           </a>
           
           <a href="https://dongkrakusaha.com/layanan-jasa-bongkar-bangunan-bandung-cimahi" class="gallery-item">
@@ -609,12 +618,13 @@ textarea.form-input { resize: vertical; min-height: 100px; }
               <span class="gallery-tag">Renovasi</span>
               <h3 class="gallery-title">Kupas Keramik & Bobok Dinding</h3>
             </div>
-            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon></div>
+            <div class="zoom-icon"><iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon></div>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- FAQ (AEO Answer Engine Optimization) -->
     <section class="section">
       <div class="container" style="max-width: 800px;">
         <div class="text-center mb-8">
@@ -625,7 +635,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
         <details class="faq-item">
           <summary>
             Apakah ada biaya untuk survei lokasi di area Bandung?
-            <iconify-icon icon="solar:alt-arrow-down-linear" width="18"></iconify-icon>
+            <iconify-icon icon="solar:alt-arrow-down-linear" width="18" aria-hidden="true"></iconify-icon>
           </summary>
           <p>Tidak ada! Survei dan konsultasi di seluruh wilayah Bandung Raya adalah 100% GRATIS. Kami akan mengukur dan menaksir nilai material tanpa memungut sepeser pun biaya transportasi.</p>
         </details>
@@ -633,7 +643,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
         <details class="faq-item">
           <summary>
             Berapa lama proses pembongkaran sebuah rumah standar?
-            <iconify-icon icon="solar:alt-arrow-down-linear" width="18"></iconify-icon>
+            <iconify-icon icon="solar:alt-arrow-down-linear" width="18" aria-hidden="true"></iconify-icon>
           </summary>
           <p>Tergantung ukuran dan tingkat kesulitan, umumnya memakan waktu 3 hingga 7 hari kerja hingga puing bersih total. Kami memastikan lahan siap bangun tepat waktu sesuai kontrak kesepakatan.</p>
         </details>
@@ -641,13 +651,14 @@ textarea.form-input { resize: vertical; min-height: 100px; }
         <details class="faq-item">
           <summary>
             Apakah material bekas bongkaran benar-benar dibeli?
-            <iconify-icon icon="solar:alt-arrow-down-linear" width="18"></iconify-icon>
+            <iconify-icon icon="solar:alt-arrow-down-linear" width="18" aria-hidden="true"></iconify-icon>
           </summary>
           <p>Ya, kami akan menaksir nilai material bekas (kayu, besi, kusen) dan membayarnya secara cash atau dipotong dari biaya jasa bongkar keseluruhan.</p>
         </details>
       </div>
     </section>
 
+    <!-- CTA BANNER & FORM -->
     <section class="cta-banner">
       <div class="cta-bg">
         <img src="https://images.unsplash.com/photo-1590496793929-36417d3117de?w=1920&q=80" alt="Detail Pembongkaran" loading="lazy" style="aspect-ratio: 16/9;">
@@ -667,7 +678,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
           
           <div class="glass-card" style="padding: 24px;">
             <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <div class="glass-card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 20px;"><iconify-icon icon="solar:map-point-linear"></iconify-icon></div>
+              <div class="glass-card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 20px;"><iconify-icon icon="solar:map-point-linear" aria-hidden="true"></iconify-icon></div>
               <div>
                 <h4 class="text-zinc-100" style="font-family: 'Inter', sans-serif;">Basecamp Operasional</h4>
                 <p class="text-zinc-400" style="font-size: 13px; margin-top: 4px;">Jl. Cibuntu Timur No.57, Wr. Muncang, Kec. Bandung Kulon, Kota Bandung, Jawa Barat 40211</p>
@@ -677,29 +688,30 @@ textarea.form-input { resize: vertical; min-height: 100px; }
         </div>
 
         <div class="form-box">
+          <!-- CTWA JS FORM -->
           <form id="ctwaForm" onsubmit="sendToWhatsApp(event)">
             <div class="form-grid">
               <div class="form-group">
-                <label class="form-label">Nama Anda</label>
+                <label class="form-label" for="waName">Nama Anda</label>
                 <input type="text" id="waName" class="form-input" required placeholder="Bpk. Budi">
               </div>
               <div class="form-group">
-                <label class="form-label">Nomor WhatsApp</label>
+                <label class="form-label" for="waPhone">Nomor WhatsApp</label>
                 <input type="tel" id="waPhone" class="form-input" required placeholder="0812xxxxxx">
               </div>
               <div class="form-group full">
-                <label class="form-label">Lokasi Bangunan</label>
+                <label class="form-label" for="waAddress">Lokasi Bangunan</label>
                 <input type="text" id="waAddress" class="form-input" required placeholder="Cth: Warung Muncang, Bandung Kulon">
               </div>
               <div class="form-group full">
-                <label class="form-label">Detail Kebutuhan</label>
+                <label class="form-label" for="waMessage">Detail Kebutuhan</label>
                 <textarea id="waMessage" class="form-input" required placeholder="Bongkar rumah tua, ukuran 10x15, butuh lahan bersih..."></textarea>
               </div>
             </div>
             
             <button type="submit" class="btn-primary mt-8" style="width: 100%; padding: 16px;">
               Kirim & Jadwalkan Survei via WhatsApp
-              <iconify-icon icon="logos:whatsapp-icon" width="20"></iconify-icon>
+              <iconify-icon icon="logos:whatsapp-icon" width="20" aria-hidden="true"></iconify-icon>
             </button>
           </form>
 
@@ -726,9 +738,10 @@ textarea.form-input { resize: vertical; min-height: 100px; }
       </div>
     </section>
 
+    <!-- FOOTER WITH WHITE HAT SILO TAGS -->
     <footer class="site-footer">
       <div class="container">
-        <h4 class="text-zinc-500 font-archivo mb-4" style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em;">Pencarian Terkait (Area Layanan)</h4>
+        <h4 class="text-zinc-400 font-archivo mb-4" style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em;">Pencarian Terkait (Area Layanan)</h4>
         <div class="footer-tags">
           <a href="https://dongkrakusaha.com/layanan-jasa-bongkar-bangunan-bandung-bandung-kulon" class="tag">Borongan bongkar rumah Bandung Kulon</a>
           <a href="https://dongkrakusaha.com/layanan-jasa-bongkar-bangunan-bandung-bandung-kota" class="tag">Spesialis bongkar ruko Bandung Kota</a>
@@ -740,19 +753,22 @@ textarea.form-input { resize: vertical; min-height: 100px; }
         </div>
 
         <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--zinc-800); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-          <p class="text-zinc-500" style="font-size: 12px;">© 2026 MAULANA ABADI. All Rights Reserved.</p>
-          <p class="text-zinc-500" style="font-size: 12px;">
-            SEO & Web Development by <a href="https://dongkrakusaha.com" target="_blank" rel="nofollow noopener noreferrer" class="text-amber">dongkrakusaha.com</a>
+          <p class="text-zinc-400" style="font-size: 12px;">© 2026 MAULANA ABADI. All Rights Reserved.</p>
+          <p class="text-zinc-400" style="font-size: 12px;">
+            SEO & Web Development by <a href="https://ciledugpromo.biz.id" target="_blank" rel="nofollow noopener noreferrer" class="text-amber">ciledugpromo.biz.id</a>
           </p>
         </div>
       </div>
     </footer>
 
+    <!-- MOBILE STICKY CTA -->
     <div class="sticky-cta">
       <a href="https://wa.me/6281339458434?text=*Halo%20Admin%20MAULANA%20ABADI,%20saya%20butuh%20survei%20gratis%20untuk%20jasa%20bongkar%20bangunan%20di%20Bandung...*" class="sticky-btn" aria-label="Hubungi via WhatsApp" target="_blank" rel="noopener">
-        <iconify-icon icon="logos:whatsapp-icon" width="32"></iconify-icon>
+        <iconify-icon icon="logos:whatsapp-icon" width="32" aria-hidden="true"></iconify-icon>
       </a>
     </div>
 
-  </div> </body>
+  </div> <!-- End Lazy Render -->
+
+</body>
 </html>
