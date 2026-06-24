@@ -8,15 +8,18 @@
 <meta name="keywords" content="Jasa Bongkar Bangunan Bandung, jasa borongan bongkar rumah Bandung Kulon, Kontraktor spesialis bongkar ruko Bandung Kota, Terima beli material bekas bongkaran Andir, Jasa bongkar interior kantor Sumur Bandung, Pemborong bongkar bangunan pabrik Bandung Timur, Tukang bongkar dinding kamar Cimahi, Rekomendasi kontraktor bongkar bangunan Bandung Raya">
 <link rel="canonical" href="https://jasa-bongkar-bangunan-bandung.vercel.app/">
 
+<!-- Preconnect untuk LCP Speed -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
+<!-- Luxury Premium Typography -->
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Iconify -->
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
 
 <style>
-/* TITAN PROTOCOL V7.4: NEON LUXURY ZERO-BLOAT CSS */
+/* TITAN PROTOCOL V7.4: AURA MESH LUXURY ZERO-BLOAT CSS */
 :root {
   --gold-300: #fcd34d;
   --gold-400: #fbbf24;
@@ -135,68 +138,28 @@ header {
 }
 .btn-outline-aura:hover { background: rgba(245, 158, 11, 0.15); border-color: var(--gold-500); transform: translateY(-2px); }
 
-/* ZERO-BLOAT CSS NEON LIGHT TRAILS BACKGROUND */
+/* ZERO-BLOAT CSS "SLOW-BREATHING AURORA MESH" BACKGROUND */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 100px; overflow: hidden; }
-.hero-neon-bg {
+.hero-aura-bg {
   position: absolute; inset: 0; z-index: -1;
-  background: radial-gradient(circle at 50% 100%, #111 0%, var(--dark-900) 80%);
+  background-color: var(--dark-900);
   overflow: hidden;
 }
-/* Grid perspective floor */
-.neon-grid {
-  position: absolute; bottom: 0; left: -50%; width: 200%; height: 40%;
-  background-image: 
-    linear-gradient(rgba(245, 158, 11, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 158, 11, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
-  transform: perspective(500px) rotateX(60deg);
-  animation: gridMove 10s linear infinite;
-  opacity: 0.4;
-}
-@keyframes gridMove { 0% { background-position: 0 0; } 100% { background-position: 0 40px; } }
-
-/* Light Trails */
-.neon-trail {
+.mesh-orb {
   position: absolute;
-  width: 2px;
-  background: linear-gradient(to bottom, transparent, var(--gold-500), #fff);
-  box-shadow: 0 0 15px var(--gold-500), 0 0 30px var(--gold-500);
-  opacity: 0;
-  animation: trailFall linear infinite;
   border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: slowDrift 20s ease-in-out infinite alternate;
+  will-change: transform;
 }
-@keyframes trailFall {
-  0% { transform: translateY(-20vh) scaleY(1); opacity: 0; }
-  10% { opacity: 1; }
-  50% { transform: translateY(50vh) scaleY(3); opacity: 1; }
-  90% { opacity: 0; }
-  100% { transform: translateY(120vh) scaleY(1); opacity: 0; }
-}
-/* Individual trail configurations */
-.trail-1 { left: 15%; height: 150px; animation-duration: 3.5s; animation-delay: 0s; }
-.trail-2 { left: 35%; height: 250px; width: 3px; animation-duration: 4s; animation-delay: 1.2s; background: linear-gradient(to bottom, transparent, #fbbf24, #fff); }
-.trail-3 { left: 65%; height: 180px; animation-duration: 3s; animation-delay: 2.5s; }
-.trail-4 { left: 85%; height: 300px; animation-duration: 5s; animation-delay: 0.5s; }
-.trail-5 { left: 50%; height: 200px; width: 4px; animation-duration: 2.8s; animation-delay: 1.8s; filter: hue-rotate(-20deg); }
+.mesh-1 { width: 60vw; height: 60vw; background: rgba(245, 158, 11, 0.15); top: -20%; left: -10%; }
+.mesh-2 { width: 50vw; height: 50vw; background: rgba(217, 119, 6, 0.12); bottom: -10%; right: -10%; animation-delay: -5s; animation-direction: alternate-reverse; }
+.mesh-3 { width: 40vw; height: 40vw; background: rgba(252, 211, 77, 0.08); top: 30%; left: 40%; animation-duration: 25s; animation-delay: -2s; }
 
-/* Diagonal Sweep */
-.neon-sweep {
-  position: absolute; top: 20%; left: -20%; width: 40%; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-400), #fff);
-  box-shadow: 0 0 20px var(--gold-400);
-  animation: sweepMove 6s cubic-bezier(0.4, 0, 0.2, 1) infinite 2s;
-  opacity: 0;
-}
-@keyframes sweepMove {
-  0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
-  10% { opacity: 0.6; }
-  90% { opacity: 0.6; }
-  100% { transform: translateX(300%) rotate(25deg); opacity: 0; }
-}
-.hero-glow-ambient {
-  position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-  width: 600px; height: 600px; background: radial-gradient(circle, var(--gold-glow) 0%, transparent 60%);
-  border-radius: 50%; filter: blur(40px); pointer-events: none;
+@keyframes slowDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(8%, 12%) scale(1.1); }
 }
 
 .hero-content { position: relative; z-index: 1; max-width: 850px; padding: 60px 0; text-align: left; }
@@ -338,7 +301,7 @@ header {
 .faq-item[open] iconify-icon { transform: rotate(180deg); }
 .faq-item p { padding: 0 24px 24px; font-size: 15px; color: var(--text-muted); line-height: 1.7; }
 
-/* CTA BANNER & FORM (AURA STYLE) */
+/* CTA BANNER & FORM */
 .cta-banner { position: relative; overflow: hidden; padding: 120px 0; text-align: center; background: var(--dark-900); border-top: 1px solid var(--dark-border); }
 .cta-bg { position: absolute; inset: 0; z-index: -1; }
 .cta-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(245,158,11,0.1) 0%, var(--dark-900) 70%); }
@@ -402,6 +365,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 }
 </style>
 
+<!-- JSON-LD GOD-TIER 3-NODE SILO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -498,17 +462,12 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 </header>
 
 <main>
+  <!-- HERO (ZERO-BLOAT CSS: SLOW BREATHING AURORA MESH) -->
   <section class="hero">
-    <div class="hero-neon-bg">
-      <div class="hero-glow-ambient"></div>
-      <div class="neon-grid"></div>
-      
-      <div class="neon-trail trail-1"></div>
-      <div class="neon-trail trail-2"></div>
-      <div class="neon-trail trail-3"></div>
-      <div class="neon-trail trail-4"></div>
-      <div class="neon-trail trail-5"></div>
-      <div class="neon-sweep"></div>
+    <div class="hero-aura-bg">
+      <div class="mesh-orb mesh-1"></div>
+      <div class="mesh-orb mesh-2"></div>
+      <div class="mesh-orb mesh-3"></div>
     </div>
     
     <div class="container hero-content">
@@ -533,8 +492,10 @@ textarea.form-input { resize: vertical; min-height: 120px; }
     </div>
   </section>
 
+  <!-- LCP LAZY RENDER WRAPPER -->
   <div class="lazy-render">
 
+    <!-- AGITASI (AURA GLASSMORPHISM CARDS) -->
     <section class="section section-dark">
       <div class="container">
         <div style="max-width: 700px; margin: 0 auto 50px; text-align: center;">
@@ -563,6 +524,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- SOLUSI & USP (SPLIT GRID) -->
     <section class="section">
       <div class="container split-grid">
         <div class="img-glass-wrapper">
@@ -619,6 +581,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- SILO LAYANAN -->
     <section id="layanan" class="section section-dark">
       <div class="container">
         <div class="text-center">
@@ -666,6 +629,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- TESTIMONIALS (AURA DARK THEME) -->
     <section class="section">
       <div class="container">
         <div class="text-center mb-8">
@@ -750,6 +714,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- FAQ (AEO Answer Engine Optimization) -->
     <section class="section section-dark">
       <div class="container" style="max-width: 800px;">
         <div class="text-center mb-8">
@@ -783,6 +748,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- CTA BANNER -->
     <section class="cta-banner">
       <div class="cta-bg"></div>
       <div class="container">
@@ -792,6 +758,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- CONTACT FORM (CTWA -> WEB3FORMS STANDBY) -->
     <section id="hubungi" class="contact-section">
       <div class="container contact-grid">
         <div>
@@ -810,8 +777,14 @@ textarea.form-input { resize: vertical; min-height: 120px; }
           </div>
         </div>
 
+        <!-- FORM GLASS (AURA STYLE) -->
         <div class="form-glass">
+          <!-- CTWA JS FORM: Siap di-switch menjadi <form action="https://api.web3forms.com/submit" method="POST"> -->
           <form id="ctwaForm" onsubmit="sendToWhatsApp(event)">
+            <!-- Input Hidden Web3Forms (Standby Mode) -->
+            <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+            <!-- <input type="hidden" name="subject" value="Leads Jasa Bongkar Bandung"> -->
+            
             <div class="form-grid">
               <div class="form-group">
                 <label class="form-label" for="waName">Nama Anda</label>
@@ -860,6 +833,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
+    <!-- FOOTER WITH WHITE HAT SILO TAGS -->
     <footer class="site-footer">
       <div class="container">
         <h4 class="text-muted font-heading mb-4" style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Eksplorasi Jasa Area Bandung Raya</h4>
@@ -885,11 +859,14 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </footer>
 
+    <!-- MOBILE STICKY CTA -->
     <div class="sticky-cta">
       <a href="https://wa.me/6285591636942?text=*Halo%20Admin%20ABDI%20SUKSES%20SEJAHTERA,%20saya%20butuh%20survei%20gratis%20untuk%20jasa%20bongkar%20bangunan%20di%20Bandung...*" class="sticky-btn" aria-label="Hubungi via WhatsApp" target="_blank" rel="noopener">
         <iconify-icon icon="logos:whatsapp-icon" aria-hidden="true"></iconify-icon>
       </a>
     </div>
 
-  </div> </body>
+  </div> <!-- End Lazy Render -->
+
+</body>
 </html>
